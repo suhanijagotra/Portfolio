@@ -13,7 +13,7 @@ html {
 
 /* similar content styling codes */
 section {
-  padding: 100px 0;
+  padding: 70px 0;
 }
 .max-width {
   max-width: 100%;
@@ -38,35 +38,20 @@ footer {
 section .title {
   position: relative;
   text-align: center;
-  font-size: 35px;
+  font-size: 42px;
   font-weight: 700;
   margin-bottom: 38px;
   padding-bottom: 4px;
   font-family: "Ubuntu", sans-serif;
   text-shadow: 2px 2px 2px #f9ca24;
-  transition: 15sec;
-}
-.about .title {
-  position: relative;
-  text-align: center;
-  font-size: 33px;
-  font-weight: 700;
-  margin-bottom: 28px;
-  padding-bottom: 1px;
-  font-family: "Ubuntu", sans-serif;
-  text-shadow: 2px 2px 2px #f9ca24;
-  transition: 15sec;
+  transition: 0.3s;
 }
 section .title:hover {
-  font-size: 35px;
-  transform: translateY(12px);
-}
-section .title:hover {
-  font-size: 37px;
+  font-size: 50px;
   transform: translateY(12px);
 }
 
-/* navbar styling */
+/* navbar styling
 .navbar {
   position: fixed;
   width: 100%;
@@ -96,6 +81,99 @@ section .title:hover {
 }
 .navbar .menu li a:hover {
   color: #f9ca24;
+} */
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .menu li {
+  list-style: none;
+  margin-left: 25px;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 30px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: #fff;
+  background: #f9ca24;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-btn {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  transition: color 0.3s ease;
+}
+
+.menu-btn:hover {
+  color: #f9ca24;
+}
+
+@media (max-width: 960px) {
+  .navbar .max-width {
+    padding: 0 30px;
+  }
+
+  .navbar .menu {
+    display: none;
+  }
+
+  .navbar .menu-btn {
+    display: block;
+  }
+
+  .navbar .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar .menu.active li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .navbar .menu.active li a {
+    font-size: 18px;
+  }
 }
 
 /* menu btn styling */
@@ -114,7 +192,6 @@ section .title:hover {
   height: 100vh;
   color: #fff;
   min-height: 500px;
-  background-size: cover;
   background-attachment: fixed;
   font-family: "Ubuntu", sans-serif;
 }
@@ -245,49 +322,77 @@ section .title:hover {
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
- /* education section styling */
- 
+
+/* education section styling */
+
+.education {
+  background: #111;
+  padding: 2rem 0;
+  color: #f9ca24;
+  font-family: "Poppins", sans-serif;
+}
+
+.education .title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  padding: 40px;
+  font-family: "Ubuntu", sans-serif;
+  text-shadow: 2px 2px 2px #f9ca24;
+  transition: 0.3s;
+  background: white;
+  color: black;
+}
 
 .education .box-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1rem 0;
-  padding-left: 3rem;
-  background: #111;
+  padding: 1rem 2rem;
 }
 
 .education .box-container .box {
-  width: 27rem;
-  margin: 4rem 1rem;
-  padding-left: 4rem;
-  border-left: 0.2rem solid #f1f0eb;
+  width: calc(33% - 2rem);
+  margin: 1rem;
+  padding: 2rem;
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
+}
+
+.education .box-container .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .education .box-container .box span {
   font-size: 1.3rem;
-  background: #222;
+  background: #444;
   color: #f9ca24;
   border-radius: 5rem;
-  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2rem;
+  position: absolute;
+  top: -1.5rem;
+  left: 2rem;
 }
 
 .education .box-container .box h3 {
   font-size: 2rem;
   color: #f9ca24;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .education .box-container .box p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #efeeeb;
-  padding: 1rem 0;
+  line-height: 1.5;
 }
-:root {
-  --yellow: #f9ca24;
-}
+
 .education .box-container .box i {
   position: absolute;
   top: -1.5rem;
@@ -300,6 +405,21 @@ section .title:hover {
   font-size: 2rem;
   color: #f5f5f4;
   background: var(--yellow);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .education .box-container .box {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .education .box-container .box {
+    width: 100%;
+    margin: 1rem 0;
+  }
 }
 
 /* skills section styling */
@@ -602,11 +722,7 @@ footer .menu {
   border-radius: 18px;
 }
 .skills-bg:hover {
-  background-image: linear-gradient(
-    #f9ca24,
-    #e0f2f1,
-    #f9ca24
-  );
+  background-image: linear-gradient(#f9ca24, #e0f2f1, #f9ca24);
 }
 .skills2 {
   width: 120px;
