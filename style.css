@@ -566,7 +566,7 @@ footer {
     z-index: 999;
   }
   .home {
-    background: url("./Images/Khushi1.png");
+    background: url("./Images/1.png");
   }
   .menu-btn i.active:before {
     content: "\f00d";
@@ -648,7 +648,7 @@ footer {
     width: 100%;
   }
   .home {
-    background: url("./Images/Khushi1.png");
+    background: url("./Images/1.png");
   }
 }
 
@@ -673,7 +673,7 @@ footer {
     width: 150px;
   }
   .home {
-    background: url("./Images/Khushi1.png");
+    background: url("./Images/1.png");
   }
 }
 
