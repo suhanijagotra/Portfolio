@@ -288,6 +288,7 @@ section .title:hover {
 }
 .services .serv-content .card {
   width: calc(33% - 20px);
+  /* height: 550px; */
   background: #222;
   text-align: center;
   border-radius: 6px;
