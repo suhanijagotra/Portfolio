@@ -299,6 +299,13 @@ section .title:hover {
   transition: all 0.3s ease;
   box-shadow: 5px 5px 6px #f9ca24;
 }
+
+.services .serv-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Added gap between cards */
+}
 .services .serv-content .card:hover {
   background-image: radial-gradient(#997b0d, #f9ca24);
   transform: translateY(10px);
@@ -319,11 +326,93 @@ section .title:hover {
   color: #fff;
 }
 .services .serv-content .card .text {
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+.services .serv-content .card .box {
+  transition: all 0.3s ease;
+}
 
+.services .serv-content .card:hover .box {
+  transform: scale(1.05);
+}
+.services .serv-content .card img.mywork {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 12px; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #c19a0e;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+  visibility: hidden;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #023833 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.linking {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.workstext .workstext2 {
+  visibility: hidden;
+  padding: 15px;
+  transition: transform 0.3s ease 0.3s, opacity 0.3s ease 0.3s; /* Add delay to synchronize with card expansion */
+  transform: translateY(100%);
+  opacity: 0;
+}
+.box:hover .workstext2{
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+ 
 /* education section styling */
 
 .education {
@@ -899,58 +988,4 @@ footer .menu {
   font-weight: 300;
   margin-left: 3px;
   font-size: 10px;
-}
-.tooltip {
-  position: relative;
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 12px; /* If you want dots under the hoverable text */
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #c19a0e;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  /* Position the tooltip text */
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-
-  /* Fade in tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-/* Tooltip arrow */
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #023833 transparent transparent transparent;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-.linking {
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
-  background-color: white;
 }
