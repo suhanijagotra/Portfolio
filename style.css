@@ -238,7 +238,7 @@ section .title:hover {
 }
 .about .about-content .left img {
   height: 400px;
-  width: 350px;
+  width: 400px;
   object-fit: cover;
   border-radius: 6px;
   transition: 0.5s;
